@@ -39,13 +39,13 @@ local WeatherMenu = {
             if btn.weather then
                 TriggerServerEvent("weather:server_change_weather", btn.data)
             end
-        end,
+        end
     },
 
-	Menu = {
+    Menu = {
         ["Weather options"] = {
             b = GetWeatherButtons()
-        },
+        }
     }
 }
 
