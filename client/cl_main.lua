@@ -35,18 +35,18 @@ local WeatherMenu = {
 	Base = { Header = { "commonmenu", "interaction_bgd" }, Color = { color_black }, HeaderColor = { 255, 255, 255 }, Title = "Weather Menu" },
 	Data = { currentMenu = "Weather options", "WEATHER_OPTIONS_MENU" },
 	Events = {
-		onSelected = function(self, _, btn, PMenu, menuData, currentButton, currentBtn, currentSlt, result, slide)
+        onSelected = function(self, _, btn, PMenu, menuData, currentButton, currentBtn, currentSlt, result, slide)
             if btn.weather then
                 TriggerServerEvent("weather:server_change_weather", btn.data)
             end
-	    end,
+        end,
     },
 
 	Menu = {
-		["Weather options"] = {
-			b = GetWeatherButtons()
+        ["Weather options"] = {
+            b = GetWeatherButtons()
         },
-	}
+    }
 }
 
 Citizen.CreateThread(function()
