@@ -15,7 +15,7 @@ local Config = {
         "THUNDER",
         "HALLOWEEN"
     }
-}²
+}
 
 RegisterServerEvent("weather:request_weather")
 AddEventHandler("weather:request_weather", function()
